@@ -46,14 +46,21 @@ public void interactwMqtt() throws InterruptedException {
   
 	Thread.sleep(5000);
 	if(uname.size()>2) {
-		act.click(uname.get(3)).sendKeys("Username").perform();
+		Thread.sleep(3000);
+		act.click(uname.get(2)).sendKeys("Username").perform();
 	}
 	else if (uname.size()>3) {
-		act.click(uname.get(4)).sendKeys("Username").perform();
+		Thread.sleep(3000);
+		act.click(uname.get(2)).sendKeys("Username").perform();
 	}
 	else {
 		System.out.println("Element Not Tracked");
 	}
+	
+	Thread.sleep(3000);
+	WebElement userN = mqa.findElement(By.name("Username"));
+	act.click(userN).sendKeys("nishnat").perform();
+	
 	Thread.sleep(3000);
 	WebElement pass = mqa.findElement(By.name("Password"));
 	act.click(pass).sendKeys("Wrong Password").perform();

@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-26T17:46:36 IST" name="Default suite" finished-at="2024-06-26T17:46:54 IST" duration-ms="18176">
+  <suite started-at="2024-06-27T17:25:10 IST" name="Default suite" finished-at="2024-06-27T17:25:54 IST" duration-ms="43962">
     <groups>
     </groups>
-    <test started-at="2024-06-26T17:46:36 IST" name="Default test" finished-at="2024-06-26T17:46:54 IST" duration-ms="18176">
-      <class name="Firstapp.MQTTAuto">
-        <test-method is-config="true" signature="initialization()[pri:0, instance:Firstapp.MQTTAuto@4593ff34]" started-at="2024-06-26T17:46:36 IST" name="initialization" finished-at="2024-06-26T17:46:41 IST" duration-ms="4274" status="PASS">
+    <test started-at="2024-06-27T17:25:10 IST" name="Default test" finished-at="2024-06-27T17:25:54 IST" duration-ms="43962">
+      <class name="Firstapp.MQTT_IOT">
+        <test-method signature="iot()[pri:0, instance:Firstapp.MQTT_IOT@2b46a8c1]" started-at="2024-06-27T17:25:10 IST" name="iot" finished-at="2024-06-27T17:25:14 IST" duration-ms="3919" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initialization -->
-        <test-method signature="interactwMqtt()[pri:0, instance:Firstapp.MQTTAuto@4593ff34]" started-at="2024-06-26T17:46:41 IST" name="interactwMqtt" finished-at="2024-06-26T17:46:54 IST" duration-ms="13682" status="PASS">
+        </test-method> <!-- iot -->
+        <test-method signature="intitializationiot()[pri:1, instance:Firstapp.MQTT_IOT@2b46a8c1]" started-at="2024-06-27T17:25:14 IST" name="intitializationiot" finished-at="2024-06-27T17:25:26 IST" duration-ms="11934" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- interactwMqtt -->
-      </class> <!-- Firstapp.MQTTAuto -->
+        </test-method> <!-- intitializationiot -->
+        <test-method signature="mqtt()[pri:2, instance:Firstapp.MQTT_IOT@2b46a8c1]" started-at="2024-06-27T17:25:26 IST" name="mqtt" finished-at="2024-06-27T17:25:32 IST" duration-ms="6709" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mqtt -->
+        <test-method signature="initializationmqtt()[pri:3, instance:Firstapp.MQTT_IOT@2b46a8c1]" started-at="2024-06-27T17:25:32 IST" name="initializationmqtt" finished-at="2024-06-27T17:25:54 IST" duration-ms="21220" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializationmqtt -->
+      </class> <!-- Firstapp.MQTT_IOT -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
