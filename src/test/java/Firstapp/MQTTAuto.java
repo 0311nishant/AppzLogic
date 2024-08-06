@@ -17,7 +17,7 @@ import java.util.List;
 
 public class MQTTAuto {
 
-	WebDriver mqa = null;
+	WindowsDriver mqa = null;
 	Actions act;
 	
 @SuppressWarnings({ "rawtypes" })
@@ -34,7 +34,6 @@ public void initialization() {
     
 }
 
-
 @Test
 public void interactwMqtt() throws InterruptedException {
 	act = new Actions(mqa);
@@ -47,27 +46,28 @@ public void interactwMqtt() throws InterruptedException {
 	Thread.sleep(5000);
 	if(uname.size()>2) {
 		Thread.sleep(3000);
-		act.click(uname.get(2)).sendKeys("Username").perform();
+		act.click(uname.get(3)).sendKeys("Username").perform();
 	}
-	else if (uname.size()>3) {
-		Thread.sleep(3000);
-		act.click(uname.get(2)).sendKeys("Username").perform();
-	}
+	
 	else {
 		System.out.println("Element Not Tracked");
 	}
 	
 	Thread.sleep(3000);
 	WebElement userN = mqa.findElement(By.name("Username"));
-	act.click(userN).sendKeys("nishnat").perform();
+	act.click(userN).sendKeys("nishant").perform();
 	
 	Thread.sleep(3000);
 	WebElement pass = mqa.findElement(By.name("Password"));
 	act.click(pass).sendKeys("Wrong Password").perform();
+	
+	WebElement passvisible = mqa.findElement(By.xpath("//*[@Name='Toggle password visibility']"));
+	act.click(passvisible).perform();
 
 	WebElement connect = mqa.findElement(By.name("CONNECT"));
 	act.click(connect).perform();
 	
-	
+	WebElement cls = mqa.findElement(By.name("Close"));
+	act.click(cls).perform();	
 }
  }

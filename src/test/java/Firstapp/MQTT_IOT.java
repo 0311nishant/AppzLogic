@@ -27,9 +27,6 @@ public class MQTT_IOT {
 	Robot rbt;
 	
     
-	
-	
-	
 	@Test
 	(priority =0)
 	@SuppressWarnings("rawtypes")
@@ -112,29 +109,11 @@ catch (Exception e) {
 		
 	}
 	@Test
-	(priority = 3)
+	(priority = 3, description = "This Method Perform Actions in MQTT")
 	@SuppressWarnings("unchecked")
 	public void initializationmqtt() throws InterruptedException, AWTException {
-//		WebDriverWait wait = new WebDriverWait(mot, 30);
-//		Thread.sleep(3000);
+		
 //		
-//	    Thread.sleep(3000);
-//		WebElement userN = mot.findElement(By.name("Username"));
-//		act.click(userN).sendKeys("nishnat").perform();
-		
-		
-		
-//		WebElement uname = mot.findElement(By.name("Username"));
-//				
-//		
-//		Thread.sleep(5000);
-//		act.click(uname).perform();
-//		act.sendKeys(uname,"Thanks").perform();
-//		
-		
-		
-		
-	//Crazy METHOD
 		Thread.sleep(3000);
 	    rbt = new Robot();
 	    rbt.mouseMove(482, 508);
@@ -146,32 +125,28 @@ catch (Exception e) {
 	    	
 	    	rbt.keyPress(code);
 	    	rbt.keyRelease(code);
-	    	Thread.sleep(2000);
+	    	Thread.sleep(500);
+	    }
 	    	
+	     Thread.sleep(3000);
+	    	
+	     WebElement pass = mot.findElement(By.name("Password"));
+	     System.out.println("Element Found");
+	     act.click(pass).sendKeys("Password");
+	     
+	     
+	     
+	   	
 		
-	    	 rbt = new Robot();
-	 	    rbt.mouseMove(863, 514);
-	 	    rbt.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-	 	    rbt.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-	 	    String pass = "Password";
-	 	    for(char p : uname.toCharArray()) {
-	 	    	int passw = KeyEvent.getExtendedKeyCodeForChar(n);
-	 	    	
-	 	    	rbt.keyPress(passw);
-	 	    	rbt.keyRelease(passw);
-	 	    	Thread.sleep(1000);
-	    	
-	    	
+	  
 		
 	    }
 	    
-		
-		
 	}
-}
-}
+
+
 	
-	
+
     
 
 
